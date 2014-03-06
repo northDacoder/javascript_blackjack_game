@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/blackjack.css" type="text/css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="js/mustache.js"></script>
+        <script type="text/javascript" src="js/blackjack.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+           <script type="text/template" id="tpl-hand">
+             {{#cards}}
+               <img src="images/cards/{{image}}" />
+             {{/cards}}
+
+            if ('back') {
+              <img src="images/cards/back.png" />
+            }
+
+           </script>
+           <div id="rocketLogo"></div>
+
+           <h1 id="pageTitle">Blackjack</h1>
+           
+           <p id="welcomeMessage">
+             Hi, thanks for stopping by our blackjack table. Pull up a chair and let's play...
+           </p>
+
+           <div id="card-table">
+             <h2>Dealer</h2>
+             <div id="dealer-hand"></div>
+             <div id="status"></div>
+             <div id="player-hand"></div>
+             <h2>Player</h2>
+             <div id="player-options">
+                 <button id="btn-new">New Game</button>
+                 <button id="btn-hit">Hit</div>
+                 <button id="btn-stand">Stand</div>
+             </div>
+           </div>
+        </div>
+    </body>
+</html>
